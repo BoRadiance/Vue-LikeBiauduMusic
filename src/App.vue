@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+
     <router-view/>
   </div>
 </template>
@@ -35,5 +35,7 @@ export default {
   body{ margin:0 auto;max-width:640px; min-width:320px;color:#555;background:#f1f1f1;height:100%;}
   a{color: #222;text-decoration: none}
   .router-link-active{color: red !important;}
+
+
 
 </style>
