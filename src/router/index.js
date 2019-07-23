@@ -6,6 +6,9 @@ import Artists from "@/pages/artists"
 import ListCate from "@/pages/listcate"
 import Ucenter from "@/pages/ucenter"
 import Search from "@/pages/search"
+import HotList from "@/pages/musiclist/hot_list"
+import KingList from "@/pages/musiclist/king_list"
+import NewsList from "@/pages/musiclist/news_list"
 
 Vue.use(Router)
 
@@ -20,21 +23,36 @@ export default new Router({
         {
           path: "home",
           component: Home,
+          redirect:"/home/hot",
+          children:[
+            {
+              path:"hot",
+              component:HotList
+            },
+            {
+              path:"king",
+              component:KingList
+            },
+            {
+              path:"news",
+              component:NewsList
+            }
+          ]
         },
         {
-          path:"artists",
+          path:"artists", //歌手
           component:Artists
         },
         {
-          path:"listcate",
+          path:"listcate", //榜单
           component:ListCate
         },
         {
-          path:"ucenter",
+          path:"ucenter", //个人中心
           component:Ucenter
         },
         {
-          path:"search",
+          path:"search",//搜索
           component:Search
         },
 
