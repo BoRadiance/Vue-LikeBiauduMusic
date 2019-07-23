@@ -9,11 +9,20 @@ import Search from "@/pages/search"
 import HotList from "@/pages/musiclist/hot_list"
 import KingList from "@/pages/musiclist/king_list"
 import NewsList from "@/pages/musiclist/news_list"
+import MoreList from "@/pages/morelist"
+import MusicPlay from "@/pages/musicplay"
+import ArtistsDetails from "@/pages/artistsDetails/artistsDetails"
+import LicateDetails from "@/pages/licateDetails/licateDetails"
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:"/musicplay",
+      name:"MusicPlay", //因为要传递参数，所以，我必须取个名字..
+      component:MusicPlay
+    },
     {
       path: '/',
       name: 'Index',
@@ -55,6 +64,23 @@ export default new Router({
           path:"search",//搜索
           component:Search
         },
+        {
+          path:"more",
+          name:"MoreList",
+          component:MoreList
+        },
+        {
+          path:"artistsdetails",
+          name:"ArtistsDetails",
+          component:ArtistsDetails
+        },
+        {
+          path:"licatedetails",
+          name:"LicateDetails",
+          component:LicateDetails
+        }
+
+
 
       ]
     }

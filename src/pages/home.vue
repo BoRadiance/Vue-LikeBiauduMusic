@@ -4,10 +4,12 @@
     <NewsMusic />
     <SwiperBanner />
     <MusicListNav />
+
+    <!--这里因为榜单没必要每次都刷新去获取数据,所以我们用了keep-alive-->
     <keep-alive>
       <router-view />
     </keep-alive>
-
+    <TodayRecommend title="热门歌单" type="24"/>
   </div>
 </template>
 
